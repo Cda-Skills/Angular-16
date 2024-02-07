@@ -1,0 +1,26 @@
+
+<div class="container">
+    <h2 class="text-center">Articles à vendre</h2>
+    <table class="table table-stripped">
+        <thead>
+            <tr>
+                <th>Titre</th>
+                <th>Description</th>
+                <th>Prix</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let article of articles">
+                <td> {{ article.titre }} </td>
+                <td> {{ article.description }} </td>
+                <td> {{ article.prix }} </td>
+                <td> {{ article.enStock }}</td>
+                <td>
+<!--                     <button (click) = "updateArticles(article.id)" class="btn btn-info">Update</button>
+ -->                    <button (click) = "deleteArticle(article.id)" class="btn btn-danger">Delete</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
