@@ -2,3 +2,12 @@
 	display:flex;
 	justify-content: center;
 }
+
+table{
+	width: 80%;
+}
+
+.mat-form-field{ 
+	font-size : 18px;
+	width: 20%;
+}
