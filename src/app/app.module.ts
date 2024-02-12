@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { EditorModule } from '@tinymce/tinymce-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,7 @@ import { UserUpdateComponent } from './user-update/user-update.component';
 import { ArticleCreateComponent } from './article-create/article-create.component';
 import { ArticleListComponent } from './article-list/article-list.component';
 import { ArticleUpdateComponent } from './article-update/article-update.component';
+import { TitresListComponent } from './titres-list/titres-list.component';
 
 
 @NgModule({
@@ -30,7 +32,8 @@ import { ArticleUpdateComponent } from './article-update/article-update.componen
 		UserUpdateComponent,
 		ArticleCreateComponent,
 		ArticleListComponent,
-		ArticleUpdateComponent
+		ArticleUpdateComponent,
+  		TitresListComponent
 	],
 	imports: [
 		BrowserModule,
@@ -38,6 +41,7 @@ import { ArticleUpdateComponent } from './article-update/article-update.componen
 		HttpClientModule,
 		FormsModule,
 		BrowserAnimationsModule,
+		EditorModule,
 		MatTableModule,
 		MatPaginatorModule,
 		MatSortModule,

@@ -6,9 +6,11 @@ import { UserUpdateComponent } from './user-update/user-update.component';
 import { ArticleCreateComponent } from './article-create/article-create.component';
 import { ArticleUpdateComponent } from './article-update/article-update.component';
 import { ArticleListComponent } from './article-list/article-list.component';
+import { TitresListComponent } from './titres-list/titres-list.component';
 
 const routes: Routes = [
 	{ path: '', redirectTo: '/', pathMatch: 'full' },
+	{ path: 'titres', component: TitresListComponent },
 	{ path: 'users', component: UserListComponent },
 	{ path: 'create-user', component: UserCreateComponent },
 	{ path: 'update-user/:id', component: UserUpdateComponent },

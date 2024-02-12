@@ -1,32 +1,63 @@
+
+
 <div class="container">
-    <h2 class="text-center"> Creer un article </h2>
-    <form (ngSubmit)="onSubmit()">
-        <div class="form-group">
-            <label for="titre"> Titre </label>
-            <input type="text" class="form-control" id="titre" [(ngModel)]="article.titre" name="titre">
-        </div>
-        <div class="form-group">
+	<h2 class="text-center">Décrivez votre article</h2>
+
+
+	<form (ngSubmit)="onSubmit()">
+		<div class="form-group">
+			<label for="titre"> Titre </label> <input type="text"
+				class="form-control" id="titre" [(ngModel)]="article.titre"
+				name="titre">
+		</div>
+		<br>
+		<!--  <div class="form-group">
             <label for="description"> Description </label>
             <input type="text" class="form-control" id="description" [(ngModel)]="article.description" name="description">
-        </div>
-        <div class="form-group">
-        
-            <label for="prix"> Prix </label>
-            <input type="text"  id="prix" [(ngModel)]="article.prix" name="prix">
-        	<!-- class="form-control" -->
-        	
-        	
-            <label for="enStock"> En Stock ? </label>
-            <input type="text"  id="enStock" [(ngModel)]="article.enStock" name="enStock">
-        	<!-- class="form-control" -->
-        	
-        	
-            <label for="quantite"> Quantité disponible </label>
-            <input type="number"  id="quantite" [(ngModel)]="article.quantite" name="quantite">
-            <!-- class="form-control" -->
-            
-        </div>
-        <button class="btn btn-success mt-2" type="submit">Ajouter</button>
-    </form>
+        </div> -->
+
+		<div class="form-group">
+			<label class="form-label" for="textArea">Votre annonce</label>
+
+			<editor apiKey="0s1sw3v4s2dxdstmzhbrn8w3hibt802r1mxg3db4xslmxpq5"
+				[init]="{
+     height: 500,
+     menubar:true,
+     plugins: [
+       'advlist autolink lists link image charmap print preview anchor',
+       'searchreplace visualblocks code fullscreen',
+       'insertdatetime media table paste code help wordcount',
+       
+     ],
+     toolbar:
+       'undo redo | block | formatselect | 
+       bold italic underline subscript removeformat| 
+       bullist numlist outdent indent|undo redo|
+       table hr|link unlink|image media code
+       |visualblocks preview fullscreen backcolor | \
+       alignleft aligncenter alignright alignjustify | \
+       bullist numlist outdent indent | removeformat | wordcount | help'}"
+				id="tiny" class="form-control" id="description" rows="6"
+				[(ngModel)]="article.description" name="description"> </editor>
+
+		</div>
+
+
+		<br>
+		<div class="form-group">
+
+			<label for="prix"> Prix </label> <input class="form-control"
+				type="text" id="prix" [(ngModel)]="article.prix" name="prix">
+
+			<br> <label for="enStock"> En Stock ? </label> <input
+				class="form-control" type="text" id="enStock"
+				[(ngModel)]="article.enStock" name="enStock"> <br> <label
+				for="quantite"> Quantité disponible : </label> <input
+				class="form-control" type="number" id="quantite"
+				[(ngModel)]="article.quantite" name="quantite">
+
+		</div>
+		<button class="btn btn-success mt-2" type="submit">Ajouter</button>
+	</form>
 </div>
 
